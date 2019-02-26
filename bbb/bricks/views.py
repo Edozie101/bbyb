@@ -1,4 +1,6 @@
 from django.shortcuts import render
+from django.http import HttpResponse
+
 
 # Create your views here.
 
@@ -19,8 +21,8 @@ def login(request):
 def registration(request):
 	return HttpResponse("Registration page")
 
-def dashboard(request):
-	return HttpResponse("Number of Bs, Current price, Current Value Held, Average Price Held rows of prices and then 3 cards with pie charts with national average and london average and the target")
+def home(request):
+	return HttpResponse("DASHBOARD Number of Bs, Current price, Current Value Held, Average Price Held rows of prices and then 3 cards with pie charts with national average and london average and the target")
 
 
 def purchase(request):
@@ -51,7 +53,7 @@ def receiving_bank(request):
 
 
 
-def show_property(request):
+def property(request,property_id):
 	return HttpResponse("Address and then images, Description , Features ")
 
 
