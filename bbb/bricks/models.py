@@ -66,4 +66,10 @@ class User(models.Model):
 
 
 
+
+
+# Favorites  add a many to many through favourites relationship
+	
+
+
 		
