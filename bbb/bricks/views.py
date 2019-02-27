@@ -10,7 +10,6 @@ def index(request):
 
 	property_list = Property.objects.order_by('-pub_date')[:5]
 	output = ', '.join([l.title for l in property_list])
-	template = loader.get_template('bricks/index.html')
 	return render(request, 'bricks/index.html')
 	
 
@@ -19,7 +18,6 @@ def index(request):
 def properties(request):
 	property_list = Property.objects.order_by('-pub_date')[:5]
 	output = ', '.join([l.title for l in property_list])
-	template = loader.get_template('bricks/properties.html')
 
 	context = {
 		'property_list': property_list
