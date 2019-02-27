@@ -1,5 +1,4 @@
-from django.db import models
-
+import datetime
 # Create your models here.
 
 #import models from django.db 
@@ -7,6 +6,7 @@ from django.db import models
 #unlike RoR migrations are made directly from the models 
 
 from django.db import models
+from django.utils import timezone
 
 #Property Model
 class Property(models.Model):
@@ -17,7 +17,31 @@ class Property(models.Model):
 	features = models.CharField(max_length = 2000)
 	pub_date = models.DateTimeField('date published')
 	image = models.ImageField
+	title = models.CharField(max_length = 250,default = "Property Title")
+	expiry_date = models.DateTimeField
 
+
+	def __str__(self):
+		return self.title
+
+
+	def was_published_less_than_a_day(self):
+		return self.pub_date >= timzezone.now() - datetime.timedelta(days=1)
+
+	def was_published_less_than_a_week(self):
+		return self.pub_date >= timezone.now() - datetime.timedelta(days=7)
+
+
+	def expiring_in_less_than_a_week(self):
+		return self.expiry_date - timezone.now() <= datetime.timedelta(days=7)
+
+
+	def expiring_in_less_than_a_month(self):
+		return self.expiry_date - timezone.now() <= datetime.timedelta(days=31)
+
+
+	def expiring_in_less_than_a_year(self):
+		return self.expiry_date - timezone.now() <= datetime.timedelta(days=365)
 
 
 # Stipe or Payment provider 
@@ -35,4 +59,11 @@ class User(models.Model):
 	postcode = models.CharField(max_length = 10)
 	address = models.CharField(max_length = 400)
 	password = models.CharField(max_length = 250)
-	
+
+
+	def __str__(self):
+		return self.first_name + self.last_name
+
+
+
+		
