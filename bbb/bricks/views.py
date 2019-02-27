@@ -2,15 +2,29 @@ from django.shortcuts import render
 from django.http import HttpResponse
 
 
+from .models import Property
+
 # Create your views here.
 
 def index(request):
-	return HttpResponse("You're in the properties index")
+
+	property_list = Property.objects.order_by('-pub_date')[:5]
+	output = ', '.join([l.title for l in property_list])
+	template = loader.get_template('bricks/index.html')
+	return render(request, 'bricks/index.html')
+	
 
 
 
 def properties(request):
-	return HttpResponse("You're in the properties get page")
+	property_list = Property.objects.order_by('-pub_date')[:5]
+	output = ', '.join([l.title for l in property_list])
+	template = loader.get_template('bricks/properties.html')
+
+	context = {
+		'property_list': property_list
+	}
+	return render(request, 'bricks/properties.html',context)
 
 
 
@@ -54,8 +68,15 @@ def receiving_bank(request):
 
 
 def property(request,property_id):
-	return HttpResponse("Address and then images, Description , Features ")
+	try:
+		property = Property.objects.get(pk=property_id)
+	except Property.DoesNotExist:
+		raise Http404("Property does not exist!! :( ")
+	
 
+
+	property = get_object_or_404(Property,property_id)
+	return render(request,'bricks/property.html', {'property': property})
 
 def team(request):
 	return HttpResponse("Describe team")
