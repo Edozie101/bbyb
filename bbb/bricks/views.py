@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import get_object_or_404, render
 from django.http import HttpResponse
 
 
@@ -10,7 +10,7 @@ def index(request):
 
 	property_list = Property.objects.order_by('-pub_date')[:5]
 	output = ', '.join([l.title for l in property_list])
-	return render(request, 'bricks/index.html')
+	return render(request, 'index.html')
 	
 
 
@@ -22,7 +22,7 @@ def properties(request):
 	context = {
 		'property_list': property_list
 	}
-	return render(request, 'bricks/properties.html',context)
+	return render(request, 'properties.html',context)
 
 
 
@@ -73,8 +73,9 @@ def property(request,property_id):
 	
 
 
-	property = get_object_or_404(Property,property_id)
-	return render(request,'bricks/property.html', {'property': property})
+	#property = get_object_or_404(Property,property_id)
+	print(property)
+	return render(request,'property.html', {'property': property})
 
 def team(request):
 	return HttpResponse("Describe team")

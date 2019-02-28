@@ -18,12 +18,12 @@ from django.urls import path
 #import views from root directory of project
 from . import views
 
-
+app_name = 'bricks'
 urlpatterns = [
     path('', views.index,name='index' ),
     path('about/', views.about, name='about'),
     path('login/', views.login, name='login'),
-    path('property/<int:property_id>/', views.property, name='property'),
+    path('property/<property_id>/', views.property, name='property'),
     path('home/', views.home, name='home'),
     path('payment/', views.payment, name='payment'),
     path('purchase/', views.purchase, name='purchase'),
@@ -39,7 +39,7 @@ urlpatterns = [
     path('structure/', views.structure, name='structure'),
     path('privacy/', views.privacy_policy, name='privacy_policy'),
     path('tandc/', views.terms_and_conditions, name='terms_and_conditions'),
-    path('prospectus/', views.prospectus, name='prospectus'),
+    path('properties/', views.properties, name='properties'),
     path('payment/', views.payment, name='payment'),
 	path('recieving/', views.receiving_bank, name='receiving_bank'),
 
