@@ -1,2 +1,2 @@
-web: gunicorn bricks.wsgi
+web: gunicorn bbyb.wsgi
 
