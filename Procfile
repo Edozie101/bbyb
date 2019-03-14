@@ -1,2 +1,2 @@
-web: gunicorn bbyb.wsgi
+web: gunicorn bbb.wsgi
 
