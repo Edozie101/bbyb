@@ -1,0 +1,19 @@
+<h1> Login </h1>]
+
+
+<form action="{% url 'bricks:login' %}" method="post">
+    {% csrf_token %}
+    <input type="text" name="first_name" value="text">
+    <label for="first_name"> First name </label>
+
+    <input type="text" name="last_name" value="text">
+    <label for="last_name"> Last name </label>
+
+    <input type="text" name="email" value="text">
+    <label for="email"> Email </label>
+
+    <input type="text" name="phone_number" value="text">
+    <label for="phone_number"> Phone number </label>
+
+    <input type="submit" value="submit">
+</form>

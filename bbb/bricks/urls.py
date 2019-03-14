@@ -31,6 +31,7 @@ urlpatterns = [
     path('convert/', views.convert, name='convert'),
     path('faq/', views.faq, name='faq'),
     path('prospectus/', views.prospectus, name='prospectus'),
+    path('registration/',views.registration, name='registration'),
     path('legal/', views.legal, name='about'),
     path('savings/', views.regular_saving_scheme, name='regular_saving_scheme'),
     path('notices/', views.notices, name='notices'),
@@ -39,9 +40,9 @@ urlpatterns = [
     path('structure/', views.structure, name='structure'),
     path('privacy/', views.privacy_policy, name='privacy_policy'),
     path('tandc/', views.terms_and_conditions, name='terms_and_conditions'),
-    path('properties/', views.properties, name='properties'),
+    path('properties/', views.IndexView.as_view(), name='properties'),
     path('payment/', views.payment, name='payment'),
 	path('recieving/', views.receiving_bank, name='receiving_bank'),
 
-    
+
     ]

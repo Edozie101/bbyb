@@ -1,8 +1,22 @@
 from django.shortcuts import get_object_or_404, render
 from django.http import HttpResponse
+from django.urls import reverse
+from django.views import generic
+
+import sys
+
+from .models import Property,User
 
 
-from .models import Property
+
+class IndexView(generic.ListView):
+	"""docstring for IndexView."""
+
+	template_name = "bricks/properties.html"
+	property_list = Property.objects.order_by('-pub_date')
+	model =  Property
+
+
 
 # Create your views here.
 
@@ -11,7 +25,7 @@ def index(request):
 	property_list = Property.objects.order_by('-pub_date')[:5]
 	output = ', '.join([l.title for l in property_list])
 	return render(request, 'index.html')
-	
+
 
 
 
@@ -30,9 +44,6 @@ def login(request):
 	return HttpResponse("You're in the login page")
 
 
-def registration(request):
-	return HttpResponse("Registration page")
-
 def home(request):
 	return HttpResponse("DASHBOARD Number of Bs, Current price, Current Value Held, Average Price Held rows of prices and then 3 cards with pie charts with national average and london average and the target")
 
@@ -40,7 +51,7 @@ def home(request):
 def purchase(request):
 	return HttpResponse("Amount and Units is it a gift, name of the recipient,email of the recipient, account number, would you like to lock the gift until the recipient reaches a certain age")
 
-	
+
 
 
 def sell(request):
@@ -50,8 +61,8 @@ def sell(request):
 
 def convert(request):
 
-	return HttpResponse( "\(warning of  at least 4 weeks notice) Date of Conversion, Amount to convert, Address to be acquired postcode lookup (GOOGLE PLACS) Solicitor Name, Email and Telephone, Total acquisition Price, Mortgage Details ") 
-	
+	return HttpResponse( "\(warning of  at least 4 weeks notice) Date of Conversion, Amount to convert, Address to be acquired postcode lookup (GOOGLE PLACS) Solicitor Name, Email and Telephone, Total acquisition Price, Mortgage Details ")
+
 
 
 
@@ -60,17 +71,36 @@ def payment(request):
 	return HttpResponse("Card Name , Card Number, Expiry, CCV and Billing Address")
 
 
-def receiving_bank(request): 
+def receiving_bank(request):
 	return HttpResponse("Account Name and Account Number Bank and Sort Code")
 
+
+def registration(request):
+	u = User()
+
+	try:
+		u.first_name = request.POST['first_name']
+		u.last_name = request.POST['last_name']
+		u.postcode = request.POST['postcode']
+		u.email = request.POST['email']
+		u.phone_number = request.POST['phone_number']
+
+		u.save()
+		print(f'{u}')
+		return render(request,'registration.html',{'success': "Congratulations you signed up!",})
+
+
+	except:
+		print("something is wrong!!! ")
+		return render(request,'registration.html',{'error_message' : "Something went wrong  try again! ",})
 
 
 def property(request,property_id):
 	try:
 		property = Property.objects.get(pk=property_id)
 	except Property.DoesNotExist:
-		raise Http404("Property does not exist!! :( ")
-	
+		raise Http404(" Property does not exist!! :( ")
+
 
 
 	#property = get_object_or_404(Property,property_id)
@@ -120,5 +150,3 @@ def gift(request):
 
 def notices(request):
 	return HttpResponse(" Put notices of changes or gifts received or sent opened and auctioned")
-
-

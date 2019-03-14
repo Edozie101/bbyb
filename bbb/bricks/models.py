@@ -1,9 +1,9 @@
 import datetime
 # Create your models here.
 
-#import models from django.db 
+#import models from django.db
 
-#unlike RoR migrations are made directly from the models 
+#unlike RoR migrations are made directly from the models
 
 from django.db import models
 from django.utils import timezone
@@ -44,7 +44,7 @@ class Property(models.Model):
 		return self.expiry_date - timezone.now() <= datetime.timedelta(days=365)
 
 
-# Stipe or Payment provider 
+# Stipe or Payment provider
 
 
 
@@ -56,6 +56,7 @@ class User(models.Model):
 	first_name = models.CharField(max_length = 50)
 	last_name = models.CharField(max_length = 50)
 	email= models.CharField(max_length = 100)
+	phone_number= models.CharField(max_length=15)
 	postcode = models.CharField(max_length = 10)
 	address = models.CharField(max_length = 400)
 	password = models.CharField(max_length = 250)
@@ -69,7 +70,3 @@ class User(models.Model):
 
 
 # Favorites  add a many to many through favourites relationship
-	
-
-
-		
