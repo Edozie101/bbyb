@@ -1,2 +1,1 @@
-web: gunicorn bbb.wsgi:application --log-file - --log-level debugqy
-
+web: gunicorn bbb.wsgi 
