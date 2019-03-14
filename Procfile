@@ -1,1 +1,1 @@
-web: gunicorn bbb:app
+web: gunicorn bbb.wsgi --pythonpath ./bbb --log-file -
