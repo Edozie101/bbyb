@@ -108,8 +108,7 @@ def property(request,property_id):
 	return render(request,'property.html', {'property': property})
 
 def team(request):
-	return HttpResponse("Describe team")
-
+	return render(request, 'team.html')
 def structure(request):
 	return HttpResponse("Org  structure")
 

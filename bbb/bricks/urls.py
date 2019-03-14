@@ -43,6 +43,7 @@ urlpatterns = [
     path('properties/', views.IndexView.as_view(), name='properties'),
     path('payment/', views.payment, name='payment'),
 	path('recieving/', views.receiving_bank, name='receiving_bank'),
+	path('team/',views.team, name='team'),
 
 
     ]
