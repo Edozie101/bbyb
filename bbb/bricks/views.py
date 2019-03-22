@@ -41,11 +41,15 @@ def properties(request):
 
 
 def login(request):
-	return HttpResponse("You're in the login page")
+	return render(request, "login.html")
+
+	# return HttpResponse("You're in the login page")
 
 
 def home(request):
-	return HttpResponse("DASHBOARD Number of Bs, Current price, Current Value Held, Average Price Held rows of prices and then 3 cards with pie charts with national average and london average and the target")
+	return render(request, "home")
+
+	# return HttpResponse("DASHBOARD Number of Bs, Current price, Current Value Held, Average Price Held rows of prices and then 3 cards with pie charts with national average and london average and the target")
 
 
 def purchase(request):
@@ -110,42 +114,61 @@ def property(request,property_id):
 def team(request):
 	return render(request, 'team.html')
 def structure(request):
-	return HttpResponse("Org  structure")
+	return render(request, "structure.html")
+
+	# return HttpResponse("Org  structure")
 
 
 def prospectus(request):
-	return HttpResponse("Download link to prospectus beneath link")
+	return render(request, "prospectus.html")
 
 def faq(request):
-	return HttpResponse("List of Faq rows with drop down answers")
+	return render(request, "faq.html")
+
+	# return HttpResponse("List of Faq rows with drop down answers")
 
 
 def settings(request):
+	return render(request, "settings.html")
 
-	return HttpResponse("Edit name surname, email address, password, target saving amount " )
+	# return HttpResponse("Edit name surname, email address, password, target saving amount " )
 
 
 def regular_saving_scheme(request):
-	return HttpResponse("Account Name, Bank Account, Sort Code, Savings Amount Token Amount, Pause Saving Scheme, Stop Saving Scheme")
+	return render(request, "savings.html")
+
+	# return HttpResponse("Account Name, Bank Account, Sort Code, Savings Amount Token Amount, Pause Saving Scheme, Stop Saving Scheme")
 
 def terms_and_conditions(request):
-	return HttpResponse("TnC")
+	return render(request, "tandc.html")
+
+	# return HttpResponse("TnC")
 
 def privacy_policy(request):
-	return HttpResponse("Privacy policy set out here")
+	return render(request, "privacy.html")
+
+	# return HttpResponse("Privacy policy set out here")
 
 
 def legal(request):
-	return HttpResponse(" Legal information ")
+	return render(request, "legal.html")
+
+	# return HttpResponse(" Legal information ")
 
 def about(request):
-	return HttpResponse(" About page")
+	return render(request, "about.html")
+
+	# return HttpResponse(" About page")
 
 
 
 def gift(request):
-	return HttpResponse(" generates an email or notification in the app on the dashboard, youve been sent a gift of .. ")
+	return render(request, "gift.html")
+
+	# return HttpResponse(" generates an email or notification in the app on the dashboard, youve been sent a gift of .. ")
 
 
 def notices(request):
-	return HttpResponse(" Put notices of changes or gifts received or sent opened and auctioned")
+	return render(request, "notices.html")
+
+	# return HttpResponse(" Put notices of changes or gifts received or sent opened and auctioned")
