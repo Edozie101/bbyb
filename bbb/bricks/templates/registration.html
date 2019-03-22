@@ -6,24 +6,46 @@
 
 {% if success  %} <p> <strong> { success } </strong> </p>  {% endif %} -->
 
-
+{% block content %}
+<h1> HELLO </h1>
+{% endblock %}
 
 <form action="{% url 'bricks:registration' %}" method="post">
     {% csrf_token %}
+    <div class="form-group">   
     <input type="text" name="first_name" value="text">
     <label for="first_name"> First name </label>
+    </div>
 
+    <div class="form-group">
+    <input type="text" name="first_name" value="text">
+    <label for="first_name"> First name </label>
+    </div>
+
+
+    <div class="form-group">   
     <input type="text" name="last_name" value="text">
     <label for="last_name"> Last name </label>
+    
+    </div>
 
+
+    <div class="form-group">
     <input type="text" name="email" value="text">
     <label for="email"> Email </label>
+    </div>
 
+
+    <div class="form-group">
     <input type="text" name="phone_number" value="text">
     <label for="phone_number"> Phone number </label>
+    </div>
 
-	<input type="text" name="postcode" value="text">
+
+    <div class="form-group">
+    <input type="text" name="postcode" value="text">
 	<label for="postcode"> Postcode</label>
+    </div>
 
     <input type="submit" value="submit">
 </form>
