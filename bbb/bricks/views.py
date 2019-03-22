@@ -12,7 +12,7 @@ from .models import Property,User
 class IndexView(generic.ListView):
 	"""docstring for IndexView."""
 
-	template_name = "bricks/properties.html"
+	template_name = "properties.html"
 	property_list = Property.objects.order_by('-pub_date')
 	model =  Property
 

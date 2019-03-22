@@ -1,4 +1,6 @@
-<h1 class="center"> Registration </h1>
+
+{% extends "base.html" %}
+
 
 
 
@@ -7,7 +9,7 @@
 {% if success  %} <p> <strong> { success } </strong> </p>  {% endif %} -->
 
 {% block content %}
-<h1> HELLO </h1>
+<h1> Register </h1>
 {% endblock %}
 
 <form action="{% url 'bricks:registration' %}" method="post">
