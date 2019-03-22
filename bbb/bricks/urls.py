@@ -45,6 +45,6 @@ urlpatterns = [
 	path('recieving/', views.receiving_bank, name='receiving_bank'),
 	path('team/',views.team, name='team'),
 	path('logintoo/',views.logintoo, name='logintoo'),
-
+    path('charts/',views.charts,name='charts'),
 
     ]

@@ -69,7 +69,8 @@ def convert(request):
 
 	return HttpResponse( "\(warning of  at least 4 weeks notice) Date of Conversion, Amount to convert, Address to be acquired postcode lookup (GOOGLE PLACS) Solicitor Name, Email and Telephone, Total acquisition Price, Mortgage Details ")
 
-
+def charts(request):
+	return render(request, "charts.html")
 
 
 def payment(request):
