@@ -56,6 +56,8 @@ def purchase(request):
 	return HttpResponse("Amount and Units is it a gift, name of the recipient,email of the recipient, account number, would you like to lock the gift until the recipient reaches a certain age")
 
 
+def logintoo(request):
+	return render(request, "logintoo.html")
 
 
 def sell(request):
