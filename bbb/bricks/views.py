@@ -72,6 +72,8 @@ def convert(request):
 def charts(request):
 	return render(request, "charts.html")
 
+def dashboard(request):
+	return render(request, "dashboard.html")
 
 def payment(request):
 

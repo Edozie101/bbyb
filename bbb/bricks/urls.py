@@ -46,5 +46,6 @@ urlpatterns = [
 	path('team/',views.team, name='team'),
 	path('logintoo/',views.logintoo, name='logintoo'),
     path('charts/',views.charts,name='charts'),
+    path('dashboard/', views.dashboard, name='dashboard'),
 
     ]
