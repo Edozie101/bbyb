@@ -71,9 +71,9 @@ var myBarChart = new Chart(ctx, {
           max: 15000,
           maxTicksLimit: 5,
           padding: 10,
-          // Include a dollar sign in the ticks
+          // Include a Pound sign in the ticks
           callback: function(value, index, values) {
-            return '$' + number_format(value);
+            return '£' + number_format(value);
           }
         },
         gridLines: {
