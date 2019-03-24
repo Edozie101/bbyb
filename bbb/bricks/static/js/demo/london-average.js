@@ -10,7 +10,7 @@ var myPieChart = new Chart(ctx, {
     labels: ["A critera", "B criteria"],
     datasets: [{
       data: [54, 46],
-      backgroundColor: ['#4e73df', '#1cc88a'],
+      backgroundColor: ['#12227e', '#a00970'],
       hoverBackgroundColor: ['#2e59d9', '#17a673'],
       hoverBorderColor: "rgba(234, 236, 244, 1)",
     }],
