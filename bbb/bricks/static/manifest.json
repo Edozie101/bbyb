@@ -1,0 +1,17 @@
+{
+    "name": "Edozie ",
+    "short_name": "ed",
+    "theme_color": "#ffcbe4",
+    "background_color": "#fa99ca",
+    "display": "standalone",
+    "scope": "/",
+    "start_url": "https://gentle-badlands-39948.herokuapp.com",
+    "description": "Invest in Bricks by Bricks",
+    "orientation": "any",
+    "icons": [
+        {
+            "src": "https://www.pinclipart.com/picdir/big/225-2250639_brick-clipart-brick-mason-png-download.png",
+            "sizes": "1024x1024"
+        }
+    ]
+}

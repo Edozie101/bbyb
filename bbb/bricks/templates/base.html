@@ -1,8 +1,11 @@
+{% load static %}
 <!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="manifest" href="{% static 'manifest.json' %}">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 
@@ -11,7 +14,7 @@
   <body>
     <header>
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#">Navbar</a>
+  <a class="navbar-brand" href="/">Alpha Design</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -19,43 +22,70 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Link</a>
+      <li class="nav-item active">
+        <a href="/properties" class="nav-link">Properties</a>
       </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Dropdown
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Action</a>
-          <a class="dropdown-item" href="#">Another action</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Something else here</a>
-        </div>
+      
+      <li class="nav-item active">
+        <a class="nav-link" href="/prospectus">Prospectus</a>
       </li>
-       <li class="nav-item dropdown">
-           <div class="dropdown-menu">
-               <a href="/" class="dropdown-item">Helloworld</a>
-           </div>
-       </li>
+      <li class="nav-item active">
+        <a href="/structure" class="nav-link">Structure</a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="/tandc">Terms and Conditons</a>
+      </li>
+        
+      <li class="nav-item active">
+        <a href="/settings" class="nav-link">Settings</a>
+
+      </li>
+      <li class="nav-item active">
+        <a href="/privacy" class="nav-link">Privacy</a>
+      </li>
+      <li class="nav-item active">
+          <a href="/team" class="nav-link">Team</a>
+
+      </li>
+      <li class="nav-item active">
+          <a href="/gift" class="nav-link">Gift</a>
+
+      </li>
+      <li class="nav-item active">
+          <a class="nav-link" href="/legal">Legals</a>
+      </li>
+      <li class="nav-item active">
+          <a class="nav-link" href="/charts">Dashboard</a>
+      </li>
+
+      <!--<li class="nav-item dropdown">-->
+      <!--  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">-->
+      <!--    *-->
+      <!--  </a>-->
+      <!--  <div class="dropdown-menu" aria-labelledby="navbarDropdown">-->
+ 
+      <!--    <div class="dropdown-divider"></div>-->
+          
+      <!--  </div>-->
+      <!--</li>-->
 
       <li class="nav-item">
-        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Extra Pages</a>
       </li>
     </ul>
-        <form class="form-inline my-2 my-lg-0">
-          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-        </form>
+      <a href="/logintoo" class="btn btn-primary btn-lg active" role="button" aria-disabled="true">Login</a>
+        <!--<form class="form-inline my-2 my-lg-0">-->
+        <!--  <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">-->
+        <!--  <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>-->
+        <!--</form>-->
       </div>
     </nav>
     </header>
     <div class="container">
       <div class="row justify-content-center">
         <div class="col-8">
-          <h1 class="mt-2">Django People</h1>
           <hr class="mt-0 mb-4">
           {% block content %}
           {% endblock %}
