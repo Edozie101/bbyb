@@ -1,6 +1,6 @@
-<div class="container centered">
+{% extends "base.html" %}
+{% load static %}
 
-    <section class="centered">
-        <h1>    </h1>
-    </section>
-</div>
+{% block content %}
+<img src="{% static "my_app/example.jpg" %}" alt="My image">
+{% endblock  %}
