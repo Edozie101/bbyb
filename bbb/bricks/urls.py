@@ -47,6 +47,8 @@ urlpatterns = [
 	path('logintoo/',views.logintoo, name='logintoo'),
     path('charts/',views.charts,name='charts'),
     path('dashboard/', views.dashboard, name='dashboard'),
-    path('registertoo/', views.registertoo, name='registertoo')
+    path('registertoo/', views.registertoo, name='registertoo'),
+    path('registerthree/', views.registerthree, name='registerthree')
+
 
     ]
