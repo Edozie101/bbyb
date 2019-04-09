@@ -1,7 +1,8 @@
 {% extends "base.html" %}
-
+{% load static %}
 {% block content %}
 <head>
+    <link rel="stylesheet" href="{% static 'css/reg.css' %}">
     <script>
         var password =  getElementById("password");
         var confirmPassword = getElementById("confirmPassword");
