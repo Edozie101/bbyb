@@ -1,0 +1,68 @@
+{% extends "base.html" %}
+
+{% block content %}
+<head>
+    <script>
+        var password =  getElementById("password");
+        var confirmPassword = getElementById("confirmPassword");
+
+        function validatePassword(){
+            if( password.value != confirmPassword.value ) {
+                confirmPassword.setCustomValidity("Set Passwords do not match ")
+            }else {
+                confirmPassword.setCustomValidity('')
+            }
+        }
+        password.onChange = validatePassword;
+        confirmPassword.onkeyup = validatePassword;
+    </script>
+
+</head>
+<div class="container-fluid">
+  <div class="row no-gutter">
+    <div class="d-none d-md-flex col-md-4 col-lg-6 bg-image"></div>
+    <div class="col-md-8 col-lg-6">
+      <div class="login d-flex align-items-center py-5">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-9 col-lg-8 mx-auto">
+              <h3 class="login-heading mb-4">Register for Bricks</h3>
+              <form>
+                <div class="form-label-group">
+                    <input type="text" id="first_name" class="form-control" placeholder="First Name" required autofocus>
+                    <label for="first_name">First Name</label>
+                </div>
+                <div class="form-label-group">
+                    <input type="text" id="last_name" class="form-control" placeholder="Last Name" required autofocus>
+                    <label for="first_name">Last Name</label>
+                </div>
+                <div class="form-label-group">
+                    <input type="date" id="dob" class="form-control" required autofocus>
+                    <label for="dob">Date Of Birth</label>
+                </div>
+                <div class="form-label-group">
+                  <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+                  <label for="inputEmail">Email address</label>
+                </div>
+
+                <div class="form-label-group">
+                  <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+                  <label for="inputPassword">Password</label>
+                </div>
+                <div class="form-label-group">
+                  <input type="password" id="confirmPassword" class="form-control" placeholder="Confirm Password" required>
+                  <label for="confirmPassword">Confirm Password</label>
+                </div>
+
+                <div class="form-label-group">
+                    <input type="submit" class="submit">
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
