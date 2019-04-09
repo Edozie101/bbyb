@@ -27,7 +27,8 @@ def index(request):
 	return render(request, 'index.html')
 
 
-
+def registertoo(request):
+	return render(request, 'registertoo.html')
 
 def properties(request):
 	property_list = Property.objects.order_by('-pub_date')[:5]
