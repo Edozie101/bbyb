@@ -67,9 +67,12 @@ def logintoo(request):
 
 
 def sell(request):
-	return HttpResponse("Amount and Units ")
+	return render(request,"sell.html")
 
-
+def buy(request):
+	return render(request,"buy.html")
+def gift2(request):
+	return render(request,"gift2.html")
 
 def convert(request):
 

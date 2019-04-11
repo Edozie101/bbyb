@@ -11594,6 +11594,10 @@ a:focus {
   background-size: cover;
 }
 
+.success-image{
+  max-width: 60%;
+}
+
 .bg-register-image {
   background: url("https://picsum.photos/600/800");
   background-position: center;
