@@ -11596,6 +11596,7 @@ a:focus {
 
 .success-image{
   max-width: 60%;
+  height:auto;
 }
 
 .bg-register-image {
