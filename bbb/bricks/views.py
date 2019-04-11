@@ -33,6 +33,8 @@ def registertoo(request):
 def registerthree(request):
 	return render(request, 'registerthree.html')
 
+def kyc(request):
+	return render(request, 'kyc.html')
 def properties(request):
 	property_list = Property.objects.order_by('-pub_date')[:5]
 	output = ', '.join([l.title for l in property_list])
