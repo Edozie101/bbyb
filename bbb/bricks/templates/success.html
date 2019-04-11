@@ -65,9 +65,9 @@
         <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header"> Buy, Sell or Gift</h6>
-            <a class="collapse-item" href="buttons.html">Buy</a>
-            <a class="collapse-item" href="cards.html">Sell</a>
-            <a href="gift.html" class="collapse-item">Gift</a>
+            <a class="collapse-item" href="/buy">Buy</a>
+            <a class="collapse-item" href="/sell">Sell</a>
+            <a href="/gift2" class="collapse-item">Gift</a>
           </div>
         </div>
       </li>
@@ -76,15 +76,15 @@
       <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
           <i class="fas fa-fw fa-wrench"></i>
-          <span>Utilities</span>
+          <span>Information</span>
         </a>
         <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
-            <h6 class="collapse-header">Custom Utilities:</h6>
-            <a class="collapse-item" href="utilities-color.html">Colors</a>
-            <a class="collapse-item" href="utilities-border.html">Borders</a>
-            <a class="collapse-item" href="utilities-animation.html">Animations</a>
-            <a class="collapse-item" href="utilities-other.html">Other</a>
+            <h6 class="collapse-header">Information</h6>
+            <a class="collapse-item" href="/legal">Legals</a>
+            <a class="collapse-item" href="/structure">Structure</a>
+            <a class="collapse-item" href="/tnc">Terms and Conditions</a>
+            <a class="collapse-item" href="/faq">Faq</a>
           </div>
         </div>
       </li>
@@ -106,13 +106,12 @@
         <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">Login Screens:</h6>
-            <a class="collapse-item" href="login.html">Login</a>
-            <a class="collapse-item" href="register.html">Register</a>
-            <a class="collapse-item" href="forgot-password.html">Forgot Password</a>
+            <a class="collapse-item" href="/logintoo">Login</a>
+            <a class="collapse-item" href="/registertoo">Register</a>
+            <a class="collapse-item" href="/dashboard">Forgot Password</a>
             <div class="collapse-divider"></div>
             <h6 class="collapse-header">Other Pages:</h6>
-            <a class="collapse-item" href="404.html">404 Page</a>
-            <a class="collapse-item" href="blank.html">Blank Page</a>
+            <a class="collapse-item" href="/dashboard">404 Page</a>
           </div>
         </div>
       </li>
@@ -353,16 +352,11 @@
               </div>
               <form class="user">
                 <div class="form-group row">
-                  <div class="col-sm-6 mb-3 mb-sm-0">
-                    <input type="number" class="form-control form-control-user" id="amount" placeholder="Amount">
-                  </div>
-                  <div class="col-sm-6">
-                    <input type="number" class="form-control form-control-user" id="units" placeholder="Units">
-                  </div>
+                    <img src="{% static 'images/icon-success.png' %}" alt="" class="img-fluid success-image">
                 </div>
 
                 <a href="/dashboard" class="btn btn-primary btn-user btn-block">
-                  Sell
+                  next
                 </a>
                 <hr>
               </form>
