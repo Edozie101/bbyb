@@ -73,6 +73,9 @@ def buy(request):
 	return render(request,"buy.html")
 def gift2(request):
 	return render(request,"gift2.html")
+	
+def success(request):
+	return render(request,'success.html')
 
 def convert(request):
 

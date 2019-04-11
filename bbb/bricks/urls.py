@@ -30,6 +30,7 @@ urlpatterns = [
     path('sell/', views.sell, name='sell'),
     path('buy/',views.buy,name='buy'),
     path('gift2/',views.gift2,name='gift2'),
+    path('success/',views.success, name="success"),
     path('convert/', views.convert, name='convert'),
     path('faq/', views.faq, name='faq'),
     path('prospectus/', views.prospectus, name='prospectus'),
