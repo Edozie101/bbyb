@@ -48,7 +48,8 @@ urlpatterns = [
     path('charts/',views.charts,name='charts'),
     path('dashboard/', views.dashboard, name='dashboard'),
     path('registertoo/', views.registertoo, name='registertoo'),
-    path('registerthree/', views.registerthree, name='registerthree')
+    path('registerthree/', views.registerthree, name='registerthree'),
+    path('kyc/', views.kyc, name='kyc')
 
 
     ]
