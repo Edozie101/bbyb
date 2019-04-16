@@ -1,6 +1,24 @@
 {% extends "base.html" %}
 {% block content %}
+{% load static %}
 
+<head>
+    <link rel="stylesheet" href="{% static 'css/videoheader.css' %}">
+
+</head>
 <h1> Privacy</h1>
+<header>
+  <div class="overlay"></div>
+
+  <div class="container h-100">
+    <div class="d-flex h-100 text-center align-items-center">
+      <div class="w-100 text-white">
+        <h1 class="display-3">Video Header</h1>
+        <p class="lead mb-0">With HTML5 Video and Bootstrap 4</p>
+      </div>
+    </div>
+  </div>
+</header>
+
 
 {% endblock %}

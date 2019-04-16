@@ -1,19 +1,23 @@
 {% extends "base.html" %}
 {% block content %}
-{% if property_list  %}
-	<ul>
-		{% for property in property_list %}
-			<li> <a href="{% url 'bricks:property' property.id %}">{{property.title}}    </li>
 
 
-		{% endfor %}
+<div class="container">
+	<div class="row">
+		{% if property_list  %}
+				{% for property in property_list %}
+				<div class="col-md-6">
+					 <a href="{% url 'bricks:property' property.id %}">{{property.title}}
+				</div>
+				{% endfor %}
+		{% else  %}
 
+			<p> NO PROPERTIES AVAILABLE. </p>
 
-	</ul>
-{% else  %}
+		{% endif %}
 
-	<p> NO PROPERTIES AVAILABLE. </p>
+	</div>
+</div>
 
-{% endif %}
 
 {% endblock %}

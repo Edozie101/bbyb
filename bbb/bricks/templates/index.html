@@ -1,20 +1,21 @@
 {% extends "base.html" %}
-
-
-
-
-
 {% block content %}
 {% load static %}
+<head>
+    <link rel="stylesheet" href="{% static 'css/videoheader.css' %}">
 
-<header class="bg-primary py-5 mb-5" style="background: url("http://picsum.photos/1600/400"); background-size: cover;">
+</head>
+
+<header>
+  <div class="overlay"></div>
+  <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
+    <source src="https://storage.googleapis.com/coverr-main/mp4/Mt_Baker.mp4" type="video/mp4">
+  </video>
   <div class="container h-100">
-    <div class="row h-100 align-items-center">
-      <div class="col-lg-12">
-          <img src="{% static "testheart.png" %}" alt="My image">
-
-        <h1 class="display-4 text-white mt-5 mb-2">Welcome to Bricks by Bricks</h1>
-        <p class="lead mb-5 text-white-50">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non possimus ab labore provident mollitia. Id assumenda voluptate earum corporis facere quibusdam quisquam iste ipsa cumque unde nisi, totam quas ipsam.</p>
+    <div class="d-flex h-100 text-center align-items-center">
+      <div class="w-100 text-white">
+        <h1 class="display-3">Welcome to Bricks by Bricks</h1>
+        <p class="lead mb-0"> By Stephen Bower </p>
       </div>
     </div>
   </div>
