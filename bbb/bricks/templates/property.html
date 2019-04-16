@@ -1,4 +1,7 @@
-<h1> HEY </h1> 
+{% extends "base.html" %}
+{% block content %}
+{% load static %}
+
 
 
 <h1> {{property.title}} </h1>
@@ -12,3 +15,5 @@
 <p> {{property.features}}</p>
 
 <a href="/properties"> Properties </a>
+
+{% end block %}
