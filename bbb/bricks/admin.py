@@ -4,5 +4,15 @@ from django.contrib import admin
 
 from .models import Property
 
+from django import forms
+
+class PropertyForm(forms.ModelForm):
+    description = forms.CharField( widget=forms.TextArea)
+    class Meta:
+        model = Property
+
+class Property_Admin(admin.ModelAdmin):
+    form = PropertyForm
+
 
 admin.site.register(Property)
