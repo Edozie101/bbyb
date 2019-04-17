@@ -18,8 +18,7 @@ from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 from django.contrib.staticfiles.urls import static
 #import views from root directory of project
 from . import views
-from . import settings
-
+from django.conf import settings
 app_name = 'bricks'
 urlpatterns = [
     path('', views.index,name='index' ),
