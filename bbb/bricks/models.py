@@ -16,7 +16,7 @@ class Property(models.Model):
 	description = models.CharField(max_length = 10000)
 	features = models.CharField(max_length = 2000)
 	pub_date = models.DateTimeField('date published')
-	image = models.ImageField(default="images/logo.png")
+	image = models.ImageField(default="images/logo.png",upload_to = 'images/')
 	title = models.CharField(max_length = 250,default = "Property Title")
 	expiry_date = models.DateTimeField
 
