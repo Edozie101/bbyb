@@ -7,7 +7,7 @@ from .models import Property
 from django import forms
 
 class PropertyForm(forms.ModelForm):
-    description = forms.CharField( widget=forms.TextArea)
+    description = forms.CharField( widget=forms.Textarea)
     class Meta:
         model = Property
 
