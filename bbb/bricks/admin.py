@@ -10,6 +10,7 @@ class PropertyForm(forms.ModelForm):
     description = forms.CharField( widget=forms.Textarea)
     class Meta:
         model = Property
+        fields = "__all__" 
 
 class Property_Admin(admin.ModelAdmin):
     form = PropertyForm
