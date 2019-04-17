@@ -8,15 +8,15 @@
 				{% for property in property_list %}
 				<div class="col-md-6">
 					<div class="card h-100">
-					  <img class="card-img-top" src="{{property.image.url}}" alt="">
+					  <img class="card-img-top" src="{{ property.image.url }}" alt="">
 					  <div class="card-body">
-						<h4 class="card-title">{{property.title}}</h4>
-						<p class="card-text">{{property description}}.</p>
+						<h4 class="card-title">{{ property.title }}</h4>
+						<p class="card-text">{{ property.description }}</p>
 					  </div>
 					  <div class="card-footer">
 						<a href="{% url 'bricks:property' property.id %}" class="btn btn-primary">Find Out More!</a>
 					  </div>
-				
+
 				</div>
 				{% endfor %}
 		{% else  %}
