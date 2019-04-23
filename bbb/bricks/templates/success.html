@@ -19,6 +19,7 @@
 
   <!-- Custom styles for this template-->
   <link href="{% static 'css/sb-admin-2.min.css' %}" rel="stylesheet">
+  <link rel="stylesheet" href=""{% static 'css/customsuccess.css' %}"">
 
 </head>
 
@@ -353,12 +354,17 @@
               </div>
               <form class="user">
                 <div class="form-group row">
-                    <img src="{% static 'images/icon-success.png' %}" alt="" class="img-fluid success-image">
+                    <div class="img-container">
+                        <img src="{% static 'images/icon-success.png' %}" alt="" class="img-fluid success-image">
+
+                    </div>
                 </div>
 
-                <a href="/dashboard" class="btn btn-primary btn-user btn-block">
-                  Next
-                </a>
+                <div class="form-group row">
+                    <a href="/dashboard" class="btn btn-primary btn-user btn-block">
+                      Next
+                    </a>
+                </div>
                 <hr>
               </form>
               <hr>
