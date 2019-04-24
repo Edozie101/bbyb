@@ -7,9 +7,9 @@ var ctx = document.getElementById("londonpiechart");
 var myPieChart = new Chart(ctx, {
   type: 'pie',
   data: {
-    labels: ["acquired", "unacquired"],
+    labels: ["deposit", "acquired", "unacquired"],
     datasets: [{
-      data: [54, 46],
+      data: [10,54, 46],
       backgroundColor: ['#12227e', '#a00970'],
       hoverBackgroundColor: ['#12227e', '#a00970'],
       hoverBorderColor: "rgba(234, 236, 244, 1)",
