@@ -7,7 +7,7 @@ var ctx = document.getElementById("londonpiechart");
 var myPieChart = new Chart(ctx, {
   type: 'pie',
   data: {
-    labels: ["A critera", "B criteria"],
+    labels: ["acquired", "unacquired"],
     datasets: [{
       data: [54, 46],
       backgroundColor: ['#12227e', '#a00970'],
