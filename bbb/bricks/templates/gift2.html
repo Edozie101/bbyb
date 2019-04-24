@@ -352,12 +352,12 @@
                 <h1 class="h4 text-gray-900 mb-4">Gift Bricks</h1>
               </div>
               <form class="user">
-                <div class="form-group row">
+                <div class="form-group column">
                   <div class="col-sm-6 mb-3 mb-sm-0">
-                    <input type="number" class="form-control form-control-user" id="amount" placeholder="Amount">
+                    <input type="text" class="form-control form-control-user" id="amount" placeholder="Amount">
                   </div>
                   <div class="col-sm-6">
-                    <input type="number" class="form-control form-control-user" id="units" placeholder="Units">
+                    <input type="text" class="form-control form-control-user" id="units" placeholder="Units">
                   </div>
 
                   <div class="row">
@@ -366,6 +366,7 @@
 
                       </div>
                         <div class="col-md-8">
+                          
                             <div class="custom-control custom-radio">
                               <input type="radio" class="custom-control-input" id="defaultUnchecked" name="defaultExampleRadios">
                               <label class="custom-control-label" for="defaultUnchecked">18</label>
@@ -391,13 +392,14 @@
                      </pre>
                  </div>
 
-                  <label>Enter Recipient email or Account Number</label>
                   <div class="col-sm-6">
+                                      <label>Enter Recipient email or Account Number</label>
+
                     <input type="email" class="form-control form-control-user" placeholder="Recipient Email">
+                    <input type="text" class="form-control form-control-user" placeholder="Account Number">
+
                   </div>
-                  <div class="col-sm-6">
-                    <input type="number" class="form-control form-control-user" placeholder="Account Number">
-                  </div>
+
                 </div>
 
                 <a href="/success" class="btn btn-primary btn-user btn-block">
