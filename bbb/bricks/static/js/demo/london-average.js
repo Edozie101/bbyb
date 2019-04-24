@@ -10,8 +10,8 @@ var myPieChart = new Chart(ctx, {
     labels: ["deposit", "acquired", "unacquired"],
     datasets: [{
       data: [10,54, 46],
-      backgroundColor: ['#12227e', '#a00970'],
-      hoverBackgroundColor: ['#12227e', '#a00970'],
+      backgroundColor: ['ffffff', '#ff9966', '#ffeee6'],
+      hoverBackgroundColor: ['ffffff', '#ffaa80', '#fffee6'],
       hoverBorderColor: "rgba(234, 236, 244, 1)",
     }],
   },
