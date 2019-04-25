@@ -89,9 +89,10 @@ def dashboard(request):
 
 def payment(request):
 
-	return HttpResponse("Card Name , Card Number, Expiry, CCV and Billing Address")
+	return render(request, "payment.html")
 
-
+def convert(request):
+	return render(request, "convert.html")
 def receiving_bank(request):
 	return HttpResponse("Account Name and Account Number Bank and Sort Code")
 

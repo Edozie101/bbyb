@@ -5,13 +5,13 @@ Chart.defaults.global.defaultFontColor = '#858796';
 // Pie Chart Example
 var ctx = document.getElementById("londonpiechart");
 var myPieChart = new Chart(ctx, {
-  type: 'doughnut',
+  type: 'pie',
   data: {
-    labels: ["A critera", "B criteria"],
+    labels: ["deposit", "acquired", "unacquired"],
     datasets: [{
-      data: [54, 46],
-      backgroundColor: ['#12227e', '#a00970'],
-      hoverBackgroundColor: ['#12227e', '#a00970'],
+      data: [10,54, 46],
+      backgroundColor: ['ffffff', '#ff9966', '#ffeee6'],
+      hoverBackgroundColor: ['ffffff', '#ffaa80', '#fffee6'],
       hoverBorderColor: "rgba(234, 236, 244, 1)",
     }],
   },
@@ -30,6 +30,6 @@ var myPieChart = new Chart(ctx, {
     legend: {
       display: false
     },
-    cutoutPercentage: 80,
+    cutoutPercentage: 0,
   },
 });

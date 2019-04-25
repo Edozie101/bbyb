@@ -19,6 +19,38 @@
 
   <!-- Custom styles for this template-->
   <link href="{% static 'css/sb-admin-2.min.css' %}" rel="stylesheet">
+    <link href="{% static 'css/reg.css' %}" rel="stylesheet">
+  <script type="text/javascript" >
+          var currencyInput = document.querySelector('input[type="currency"]');
+      var currency = 'GBP'; // https://www.currency-iso.org/dam/downloads/lists/list_one.xml
+      
+      currencyInput.addEventListener('focus', onFocus);
+      currencyInput.addEventListener('blur', onBlur);
+      
+      function localStringToNumber( s ){
+          return Number(String(s).replace(/[^0-9.-]+/g,""));
+      }
+      
+      function onFocus(e){
+        var value = e.target.value;
+        e.target.value = value ? localStringToNumber(value) : '';
+      }
+      
+      function onBlur(e){
+        var value = e.target.value;
+      
+        const options = {
+            maximumFractionDigits : 2,
+            currency              : currency,
+            style                 : "currency",
+            currencyDisplay       : "symbol"
+        }
+        
+        e.target.value = value 
+          ? localStringToNumber(value).toLocaleString(undefined, options)
+          : ''
+      }
+  </script>
 
 </head>
 
@@ -35,7 +67,7 @@
         <div class="sidebar-brand-icon rotate-n-15">
           <i class="fas fa-home"></i>
         </div>
-        <div class="sidebar-brand-text mx-3">Bricks <sup>By Bricks </sup></div>
+        <div class="sidebar-brand-text mx-3">Brick <sup>By Bricks </sup></div>
       </a>
 
       <!-- Divider -->
@@ -84,7 +116,7 @@
             <a href="/charts" class="collapse-item">Performance</a>
             <a class="collapse-item" href="/legal">Legals</a>
             <a class="collapse-item" href="/structure">Structure</a>
-            <a class="collapse-item" href="/tnc">Terms and Conditions</a>
+            <a class="collapse-item" href="/tandc">Terms and Conditions</a>
             <a class="collapse-item" href="/faq">Faq</a>
           </div>
         </div>
@@ -352,60 +384,43 @@
                 <h1 class="h4 text-gray-900 mb-4">Convert</h1>
               </div>
               <form class="user">
-                <div class="form-group row">
+                <div class="form-group ">
 
-                  <div class="row">
-                      <div class="col-md-6">
+                  
                             <label for="date_of_conversion">Date Of Conversion</label>
                             <input type="date" class="form-control form-control-user">
-                      </div>
-                  </div>
-                  <div class="row">
-                      <div class="col-md-6">
+                 
+               
                           <label for="amount"> Amount To Convert </label>
-                          <input type="number" class="form-control form-control user">
-                      </div>
-                  </div>
-                  <div class="row">
-                      <div class="col-md-6">
+                          <input type="currency" class="form-control form-control user">
+                 
+                  
                           <label for="address">Address to be acquired </label>
                           <input type="text" class="form-control form-control user">
-                      </div>
-                      <div class="col-md-4">
+                   
                           <a href="#" class="btn btn-alert"> Look Up </a>
-                      </div>
+                          <br>
                      
-                  </div>
-                  <div class="row">
-                      <div class="col-md-6">
+                     
+                  
                           <label for="solicitor">Solicitor Name</label>
                           <input type="text" class="form-control form-control user">
-                      </div>
-                  </div>
-                  <div class="row">
-                      <div class="col-md-6">
+                  
                           <label for="solicitor_email">Solicitor Email</label>
                           <input type="email" class="form-control form-control user">
-                      </div>
-                  </div>
-                  <div class="row">
-                      <div class="col-md-6">
+                 
+                  
+                 
                           <label for="solicitor_phone">Solicitor Tel</label>
-                          <input type="number" class="form-control form-control user">
-                      </div>
-                  </div>
-                  <div class="row">
-                      <div class="col-md-6">
+                          <input type="tel" class="form-control form-control user">
+                   
                           <label for="acquisition_price">Total Acquisition Price</label>
-                          <input type="number" class="form-control form-control user">
-                      </div>
-                  </div>
-                  <div class="row">
-                      <div class="col-md-6">
+                          <input type="currency" class="form-control form-control user">
+                   
+
                           <label for="mortgagee_details">Mortgagee Details</label>
                           <input type="text" class="form-control form-control user">
-                      </div>
-                  </div>
+              
                      <div class="space">
 
                          <pre>

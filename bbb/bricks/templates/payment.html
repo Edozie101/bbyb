@@ -19,6 +19,8 @@
 
   <!-- Custom styles for this template-->
   <link href="{% static 'css/sb-admin-2.min.css' %}" rel="stylesheet">
+    <link href="{% static 'css/reg.css' %}" rel="stylesheet">
+
 
 </head>
 
@@ -84,7 +86,7 @@
             <a href="/charts" class="collapse-item">Performance</a>
             <a class="collapse-item" href="/legal">Legals</a>
             <a class="collapse-item" href="/structure">Structure</a>
-            <a class="collapse-item" href="/tnc">Terms and Conditions</a>
+            <a class="collapse-item" href="/tandc">Terms and Conditions</a>
             <a class="collapse-item" href="/faq">Faq</a>
           </div>
         </div>
@@ -334,12 +336,13 @@
         <!-- End of Topbar -->
 
         <!-- Begin Page Content -->
+        
         <div class="container-fluid">
 
           <!-- Page Heading -->
           <div class="d-sm-flex align-items-center justify-content-between mb-4">
-            <h1 class="h3 mb-0 text-gray-800">Dashboard</h1>
-            <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-download fa-sm text-white-50"></i> Generate Report</a>
+            <!--<h1 class="h3 mb-0 text-gray-800">Dashboard</h1>-->
+            <!--<a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-download fa-sm text-white-50"></i> Generate Report</a>-->
           </div>
             <div class="card o-hidden border-0 shadow-lg my-5">
       <div class="card-body p-0">
@@ -349,43 +352,41 @@
           <div class="col-lg-7">
             <div class="p-5">
               <div class="text-center">
-                <h1 class="h4 text-gray-900 mb-4">Payment</h1>
+                        <h3 class="panel-title display-td" >Payment Details</h3>
+                        <div class="display-td" >                            
+                            <img class="img-responsive pull-right" src="http://i76.imgup.net/accepted_c22e0.png">
+                        </div>
               </div>
               <form class="user">
-                <div class="form-group row">
-                 <div class="row">
-                     <div class="col-md-6">
-                         <label for="card_name">Card Name</label>
-                         input.form-control.form-control-user
-                     </div>
-                 </div>
-                 <div class="row">
-                     <div class="col-md-6">
+                <div class="form-group ">
+                
+                         <!--<label for="card_name">Card Name</label>-->
+                         <!--<input type="text" class="form-control form-control-user">-->
+              
+              
                          <label for="card_name">Card Number</label>
-                         input.form-control.form-control-user
-                     </div>
-                 </div>
-                 <div class="row">
-                     <div class="col-md-6">
+                         <input type="text" class="form-control form-control-user">
+               
+                
                          <label for="card_name">Card Expiry</label>
-                         <input type="date" class="form-control form-control-user">
-                     </div>
-                 </div>
-                 <div class="row">
-                     <div class="col-md-6">
+                         <input type="month" class="form-control form-control-user">
+                  
+                
                          <label for="card_name">CCV</label>
-                         <input type="number" class="form-control form-control-user">
-                     </div>
-                 </div>
-                 <div class="row">
-                     <div class="col-md-6">
+                         <input type="text" class="form-control form-control-user">
+                  
+               
                          <label for="card_name">Billing Address</label>
                          <input type="text" class="form-control form-control-user">
-                     </div>
-                     <div class="col-md-6">
+                   
                          <a href="#" class="btn btn-success">Look Up</a>
-                     </div>
-                 </div>
+                    
+               
+        
+        
+          
+            
+        </div>        
                  <div class="space">
 
                      <pre>
@@ -401,6 +402,97 @@
                 <hr>
               </form>
               <hr>
+                <!-- CREDIT CARD FORM STARTS HERE -->
+            <!--<div class="panel panel-default credit-card-box">-->
+            <!--    <div class="panel-heading display-table" >-->
+            <!--        <div class="row display-tr" >-->
+            <!--            <h3 class="panel-title display-td" >Payment Details</h3>-->
+            <!--            <div class="display-td" >                            -->
+            <!--                <img class="img-responsive pull-right" src="http://i76.imgup.net/accepted_c22e0.png">-->
+            <!--            </div>-->
+            <!--        </div>                    -->
+            <!--    </div>-->
+            <!--    <div class="panel-body">-->
+            <!--        <form role="form" id="payment-form" method="POST" action="javascript:void(0);">-->
+            <!--            <div class="row">-->
+            <!--                <div class="col-xs-12">-->
+            <!--                    <div class="form-group">-->
+            <!--                        <label for="cardNumber">CARD NUMBER</label>-->
+            <!--                        <div class="input-group">-->
+            <!--                            <input -->
+            <!--                                type="tel"-->
+            <!--                                class="form-control"-->
+            <!--                                name="cardNumber"-->
+            <!--                                placeholder="Valid Card Number"-->
+            <!--                                autocomplete="cc-number"-->
+            <!--                                required autofocus -->
+            <!--                            />-->
+            <!--                            <span class="input-group-addon"><i class="fa fa-credit-card"></i></span>-->
+            <!--                        </div>-->
+            <!--                    </div>                            -->
+            <!--                </div>-->
+            <!--            </div>-->
+            <!--            <div class="row">-->
+            <!--                <div class="col-xs-7 col-md-7">-->
+            <!--                    <div class="form-group">-->
+            <!--                        <label for="cardExpiry"><span class="hidden-xs">EXPIRATION</span><span class="visible-xs-inline">EXP</span> DATE</label>-->
+            <!--                        <input -->
+            <!--                            type="tel" -->
+            <!--                            class="form-control" -->
+            <!--                            name="cardExpiry"-->
+            <!--                            placeholder="MM / YY"-->
+            <!--                            autocomplete="cc-exp"-->
+            <!--                            required -->
+            <!--                        />-->
+            <!--                    </div>-->
+            <!--                </div>-->
+            <!--                <div class="col-xs-5 col-md-5 pull-right">-->
+            <!--                    <div class="form-group">-->
+            <!--                        <label for="cardCVC">CV CODE</label>-->
+            <!--                        <input -->
+            <!--                            type="tel" -->
+            <!--                            class="form-control"-->
+            <!--                            name="cardCVC"-->
+            <!--                            placeholder="CVC"-->
+            <!--                            autocomplete="cc-csc"-->
+            <!--                            required-->
+            <!--                        />-->
+            <!--                    </div>-->
+            <!--                </div>-->
+            <!--            </div>-->
+            <!--            <div class="row">-->
+            <!--                <div class="col-xs-12">-->
+            <!--                    <div class="form-group">-->
+            <!--                        <label for="couponCode">COUPON CODE</label>-->
+            <!--                        <input type="text" class="form-control" name="couponCode" />-->
+            <!--                    </div>-->
+            <!--                </div>                        -->
+            <!--            </div>-->
+            <!--            <div class="row">-->
+            <!--                <div class="col-xs-12">-->
+            <!--                    <button class="subscribe btn btn-success btn-lg btn-block" type="button">Start Subscription</button>-->
+            <!--                </div>-->
+            <!--            </div>-->
+            <!--            <div class="row" style="display:none;">-->
+            <!--                <div class="col-xs-12">-->
+            <!--                    <p class="payment-errors"></p>-->
+            <!--                </div>-->
+            <!--            </div>-->
+            <!--        </form>-->
+            <!--    </div>-->
+            <!--</div>            -->
+            <!-- CREDIT CARD FORM ENDS HERE -->
+              <div class="row">
+                <h3> Previous cards </h3>
+              </div>
+                <select    id="" class="form-control" style="  border-radius: 3.5rem; height: 107%;">
+                  <option>
+                    ...4352
+                  </option>
+                  <option>
+                    ...5253
+                  </option>
+                </select>
             </div>
           </div>
         </div>
