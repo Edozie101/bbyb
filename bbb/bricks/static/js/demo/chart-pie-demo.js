@@ -1,15 +1,12 @@
 // Set new default font family and font color to mimic Bootstrap's default styling
-Chart.defaults.global.defaultFontFamily = 'Nunito', '-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif';
 Chart.defaults.global.defaultFontColor = '#858796';
+Chart.defaults.global.defaultFontFamily = 'Nunito', '-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif';
 
 // Pie Chart Example
 var ctx = document.getElementById("myPieChart");
 var myPieChart = new Chart(ctx, {
-<<<<<<< HEAD
-  type: 'Pie',
-=======
+
   type: 'pie',
->>>>>>> 53d927fa2c5fff5a2ea438c3a829b8d1a3f235e3
   data: {
     labels: ["deposit","acquired", "unacquired"],
     datasets: [{
@@ -34,10 +31,6 @@ var myPieChart = new Chart(ctx, {
     legend: {
       display: false
     },
-<<<<<<< HEAD
     cutoutPercentage: 0,
-=======
-    cutoutPercentage: 10,
->>>>>>> 53d927fa2c5fff5a2ea438c3a829b8d1a3f235e3
   },
 });
