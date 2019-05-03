@@ -19,6 +19,10 @@
 
   <!-- Custom styles for this template-->
   <link href="{% static 'css/sb-admin-2.min.css' %}" rel="stylesheet">
+  <link href="{% static 'css/loading-bar.css' %}" rel="stylesheet">
+
+
+
 
 </head>
 
@@ -656,7 +660,12 @@
                 <!-- Card Body -->
                 <div class="card-body">
                   <div class="chart-pie pt-4 pb-2">
-                    <canvas id="londonpiechart"></canvas>
+                    <!-- <canvas id="londonpiechart"></canvas> -->
+                    <div  class="ldBar label-center"
+                          style="width:50%;height:50%;margin:auto"
+                          data-value="35"
+                          data-preset="circle"
+                        ></div>
                   </div>
                   <div class="mt-4 text-center small">
                     <span class="mr-2">
@@ -919,6 +928,7 @@
   <script src="{% static 'js/demo/chart-area-demo.js' %}"></script>
   <script src="{% static 'js/demo/chart-pie-demo.js' %}"></script>
   <script src="{% static 'js/demo/london-average.js' %}"></script>
+  <script src="{% static 'js/loadingbar/loading-bar.js' %}"></script>
 
   <script src="{% static 'js/demo/chart-bar-demo.js' %}"></script>
 
