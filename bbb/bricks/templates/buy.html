@@ -49,11 +49,15 @@
        // });
 
        $(function(){
-          $('#units').input(function(){
+          $('#units')..on('input',function(){
          $('#amount').val($(this).val() * 150.6);
           });
         });
-
+        $(function(){
+           $('#amount').on('change',function(){
+          $('#units').val($(this).val() / 150.6);
+           });
+         });
 
     $("#btnSearch").click(function(){
     	alert($('.btn-select').text()+", "+$('.btn-select2').text());
