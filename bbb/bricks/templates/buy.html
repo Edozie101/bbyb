@@ -49,11 +49,13 @@
        // });
 
        $(function(){
-          $('#units').keyup(function(){
+          $('#units').change(function(){
          $('#amount').text($(this).val());
          $(alert("hererel"))
           });
         });
+
+
     $("#btnSearch").click(function(){
     	alert($('.btn-select').text()+", "+$('.btn-select2').text());
 
