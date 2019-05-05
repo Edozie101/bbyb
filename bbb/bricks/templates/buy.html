@@ -49,9 +49,8 @@
        // });
 
        $(function(){
-          $('#units').change(function(){
-         $('#amount').val($(this).val());
-         $('#amount').text("hello")
+          $('#units').input(function(){
+         $('#amount').val($(this).val() * 150.6);
           });
         });
 
