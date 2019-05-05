@@ -27,7 +27,7 @@
         var selText = $(this).text();
         $(this).parents('.btn-group').find('.dropdown-toggle').html(selText+' <span class="caret"></span>');
          });
-    
+
     $("#btnSearch").click(function(){
     	alert($('.btn-select').text()+", "+$('.btn-select2').text());
     });
@@ -35,30 +35,30 @@
   <script type="text/javascript" >
           var currencyInput = document.querySelector('input[type="currency"]');
       var currency = 'GBP'; // https://www.currency-iso.org/dam/downloads/lists/list_one.xml
-      
+
       currencyInput.addEventListener('focus', onFocus);
       currencyInput.addEventListener('blur', onBlur);
-      
+
       function localStringToNumber( s ){
           return Number(String(s).replace(/[^0-9.-]+/g,""));
       }
-      
+
       function onFocus(e){
         var value = e.target.value;
         e.target.value = value ? localStringToNumber(value) : '';
       }
-      
+
       function onBlur(e){
         var value = e.target.value;
-      
+
         const options = {
             maximumFractionDigits : 2,
             currency              : currency,
             style                 : "currency",
             currencyDisplay       : "symbol"
         }
-        
-        e.target.value = value 
+
+        e.target.value = value
           ? localStringToNumber(value).toLocaleString(undefined, options)
           : ''
       }
@@ -408,14 +408,16 @@
                                 <option> Central London </option>
                                  <option> South East England </option>
                                 <option> Midlands </option>
-                                 <option> North East England </option>                                 
+                                 <option> North East England </option>
 
                               </select>
                   </div>
-                  <div class="col-sm-6">
+                  <div class="col-sm-3">
                     <input type="text" class="form-control form-control-user" id="units" placeholder="Units">
                   </div>
-                  
+                  <div class="col-sm-3">
+                    <input type="currency" class="form-control form-control-user" id="amount" placeholder="Amount">
+                  </div>
                 </div>
 
                 <a href="/payment" class="btn btn-primary btn-user btn-block">
