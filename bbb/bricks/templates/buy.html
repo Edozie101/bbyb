@@ -50,12 +50,12 @@
 
        $(function(){
           $('#units').on('change keyup paste',function(){
-         $('#amount').val(Math.round($(this).val() * 150.6 * 100) / 100);
+         $('#amount').val(Math.round($(this).val() * 150.61 * 100) / 100);
           });
         });
         $(function(){
            $('#amount').on('change keyup paste',function(){
-          $('#units').val(Math.round($(this).val() / 150.6 * 100000 ) / 100000);
+          $('#units').val(Math.round($(this).val() / 150.61 * 100000 ) / 100000);
            });
          });
 
@@ -434,7 +434,7 @@
             <div class="card o-hidden border-0 shadow-lg my-5">
       <div class="card-body p-0">
         <!-- Nested Row within Card Body -->
-        <div class="row">
+        <div class=" form-group row">
           <div class="col-lg-5 d-none d-lg-block bg-login-image"></div>
           <div class="col-lg-7">
             <div class="p-5">
@@ -449,7 +449,6 @@
                                  <option> South East England </option>
                                 <option> Midlands </option>
                                  <option> North East England </option>
-
                               </select>
                   </div>
                   <div class="col-sm-3 form-label-group">
