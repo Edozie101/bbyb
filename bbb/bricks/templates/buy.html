@@ -49,12 +49,12 @@
        // });
 
        $(function(){
-          $('#units').on('input',function(){
+          $('#units').on('change keyup paste',function(){
          $('#amount').val($(this).val() * 150.6);
           });
         });
         $(function(){
-           $('#amount').on('change',function(){
+           $('#amount').on('change keyup paste',function(){
           $('#units').val($(this).val() / 150.6);
            });
          });
