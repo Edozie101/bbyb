@@ -50,12 +50,12 @@
 
        $(function(){
           $('#units').on('change keyup paste',function(){
-         $('#amount').val($(this).val() * 150.6);
+         $('#amount').val(Math.round($(this).val() * 150.6 * 100) / 100);
           });
         });
         $(function(){
            $('#amount').on('change keyup paste',function(){
-          $('#units').val($(this).val() / 150.6);
+          $('#units').val(Math.round($(this).val() / 150.6 * 100000 ) / 100000);
            });
          });
 
@@ -95,6 +95,14 @@
           : ''
       }
   </script>
+  <style>
+  .currencyinput {
+    border: 1px inset #ccc;
+    }
+    .currencyinput input {
+    border: 0;
+    }
+  </style>
 <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.9/dist/css/bootstrap-select.min.css">
 
@@ -445,10 +453,10 @@
                               </select>
                   </div>
                   <div class="col-sm-3">
-                    <input type="text" class="form-control form-control-user" id="units" placeholder="Units">
+                    <span class="currencyinput">B<input type="text" class="form-control form-control-user" id="units" placeholder="Units"></span>
                   </div>
                   <div class="col-sm-3">
-                    <input type="currency" class="form-control form-control-user" id="amount" placeholder="Amount">
+                    <span class="currencyinput">£<input type="currency" class="form-control form-control-user" id="amount" placeholder="Amount"></span>
                   </div>
                 </div>
 
