@@ -20,6 +20,7 @@
   <!-- Custom styles for this template-->
   <link href="{% static 'css/sb-admin-2.min.css' %}" rel="stylesheet">
   <link href="{% static 'css/loading-bar.css' %}" rel="stylesheet">
+  <link href="{% static 'css/mobile-ready.css' %}" rel="stylesheet">
 
   <style type="text/css">
     .ldBar-label {
@@ -40,7 +41,7 @@
   <div id="wrapper">
 
     <!-- Sidebar -->
-      <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion toggled toggled" id="accordionSidebar">
+      <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion toggled toggled smaller-screen" id="accordionSidebar">
 
       <!-- Sidebar - Brand -->
       <a class="sidebar-brand d-flex align-items-center justify-content-center" href="/dashboard">
@@ -163,22 +164,23 @@
 
       <!-- Main Content -->
       <div id="content">
+        <!-- Bottom bar -->
+        <nav id="bottomtab" class="navbar navbar-expand-md navbar-white bg-white fixed-bottom bigger-screen ">
+
+            <a href="/buy" class="navbar-brand"><i class="fas fa-money-bill">Buy</i></a>
+            <a href="/sell" class="navbar-brand"><i class="fas fa-pound-sign">Sell</i></a>
+            <a href="/gift2" class="navbar-brand"><i class="fas fa-gift">Gift</i></a>
+            <a href="/dashboard" class="navbar-brand"><i class="fas fa-home"></i>Home</a>
+            <a href="#" class="navbar-brand"><i class="fas fa-buromobelexperte">Actions</i></a>
+            <a href="#" class="navbar-brand"><i class="far fa-caret-square-down">More</i></a>
+
+
+
+
+         </nav>
 
         <!-- Topbar -->
         <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
-            <nav id="bottomtab" class="navbar navbar-expand-md navbar-white bg-white fixed-bottom">
-
-                <a href="/buy" class="navbar-brand"><i class="fas fa-money-bill">Buy</i></a>
-                <a href="/sell" class="navbar-brand"><i class="fas fa-pound-sign">Sell</i></a>
-                <a href="/gift2" class="navbar-brand"><i class="fas fa-gift">Gift</i></a>
-                <a href="/dashboard" class="navbar-brand"><i class="fas fa-home"></i>Home</a>
-                <a href="#" class="navbar-brand"><i class="fas fa-buromobelexperte">Actions</i></a>
-                <a href="#" class="navbar-brand"><i class="far fa-caret-square-down">More</i></a>
-
-
-
-
-             </nav>
 
           <!-- Sidebar Toggle (Topbar) -->
           <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
