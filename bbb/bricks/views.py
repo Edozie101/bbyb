@@ -20,6 +20,9 @@ class IndexView(generic.ListView):
 
 # Create your views here.
 
+def actions(request):
+	return  render(request, 'actions.html')
+
 def index(request):
 
 	property_list = Property.objects.order_by('-pub_date')[:5]
@@ -73,7 +76,7 @@ def buy(request):
 	return render(request,"buy.html")
 def gift2(request):
 	return render(request,"gift2.html")
-	
+
 def success(request):
 	return render(request,'success.html')
 

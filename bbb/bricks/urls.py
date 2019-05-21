@@ -33,6 +33,7 @@ urlpatterns = [
     path('gift2/',views.gift2,name='gift2'),
     path('success/',views.success, name="success"),
     path('convert/', views.convert, name='convert'),
+    path('actions/', views.actions, name='actions'),
     path('faq/', views.faq, name='faq'),
     path('prospectus/', views.prospectus, name='prospectus'),
     path('registration/',views.registration, name='registration'),
